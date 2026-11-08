@@ -97,13 +97,17 @@
 
 <!--START_SECTION:activity-->
 <div align="center">
-  <sub><b>Repos:</b> <code>4</code> &nbsp;·&nbsp; <b>Total Stars:</b> <code>2</code> &nbsp;·&nbsp; <b>Forks:</b> <code>0</code> &nbsp;·&nbsp; <i>Synced automatically via GitHub Actions</i></sub>
+  <sub><b>Repos:</b> <code>4</code> &nbsp;·&nbsp; <b>Total Stars:</b> <code>3</code> &nbsp;·&nbsp; <b>Forks:</b> <code>0</code> &nbsp;·&nbsp; <i>Synced automatically via GitHub Actions</i></sub>
 </div>
 
 <div align="center">
 
 | Activity | Actor | Repository | Time (UTC+7) |
 |---|---|---|---|
+| ⭐ Starred | [`@patonobro`](https://github.com/patonobro) | [`0xshijn/igchat-v2`](https://github.com/0xshijn/igchat-v2) | `08/11 19:32 UTC+7` |
+| 📦 Pushed `main` | [`@0xshijn`](https://github.com/0xshijn) | [`0xshijn/0xshijn`](https://github.com/0xshijn/0xshijn) | `08/11 13:30 UTC+7` |
+| 📦 Pushed `main` | [`@0xshijn`](https://github.com/0xshijn) | [`0xshijn/igchat-v2`](https://github.com/0xshijn/igchat-v2) | `08/11 13:21 UTC+7` |
+| ✨ Created branch | [`@0xshijn`](https://github.com/0xshijn) | [`0xshijn/0xshijn`](https://github.com/0xshijn/0xshijn) | `08/11 13:15 UTC+7` |
 | ⭐ Starred | [`@m008v`](https://github.com/m008v) | [`0xshijn/igchat-v2`](https://github.com/0xshijn/igchat-v2) | `08/11 13:10 UTC+7` |
 | ⭐ Starred | [`@0xshijn`](https://github.com/0xshijn) | [`0xshijn/igchat-v2`](https://github.com/0xshijn/igchat-v2) | `08/11 12:59 UTC+7` |
 
@@ -111,6 +115,7 @@
 
 <div align="center">
   <sub><b>Recent Stargazers</b></sub><br />
+  <a href="https://github.com/patonobro" title="@patonobro starred 0xshijn/igchat-v2"><img src="https://avatars.githubusercontent.com/u/183926351?v=4&s=56" width="28" height="28" alt="@patonobro" /></a>
   <a href="https://github.com/m008v" title="@m008v starred 0xshijn/igchat-v2"><img src="https://avatars.githubusercontent.com/u/96736064?v=4&s=56" width="28" height="28" alt="@m008v" /></a>
   <a href="https://github.com/0xshijn" title="@0xshijn starred 0xshijn/igchat-v2"><img src="https://avatars.githubusercontent.com/u/240699867?v=4&s=56" width="28" height="28" alt="@0xshijn" /></a>
 </div>
