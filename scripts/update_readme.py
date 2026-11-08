@@ -24,12 +24,12 @@ MAX_ACTIVITY_ROWS = 6
 MAX_STARGAZERS = 14
 
 
-def _api_get(url: str, *, accept: str = "application/vnd.github+json") -> list | dict:
+def _api_get(url: str, *, accept: str = "application/vnd.github+json", use_auth: bool = True) -> list | dict:
     headers = {
         "Accept": accept,
         "User-Agent": f"{OWNER}-profile-readme-updater",
     }
-    if TOKEN:
+    if use_auth and TOKEN:
         headers["Authorization"] = f"Bearer {TOKEN}"
     req = urllib.request.Request(url, headers=headers)
     with urllib.request.urlopen(req, timeout=20) as resp:
@@ -41,6 +41,13 @@ def _fmt_vn_time(iso_str: str) -> str:
         return "—"
     dt = datetime.fromisoformat(iso_str.replace("Z", "+00:00")).astimezone(VN_TZ)
     return dt.strftime("%d/%m %H:%M UTC+7")
+
+
+def _clean_avatar(url: str, size: int = 56) -> str:
+    if not url:
+        return ""
+    base = url.split("?", 1)[0]
+    return f"{base}?v=4&s={size}"
 
 
 def _describe_event(ev: dict) -> str | None:
@@ -82,6 +89,42 @@ def _describe_event(ev: dict) -> str | None:
     return None
 
 
+def _seed_webhook_event(all_events: list[dict], stargazers: list[dict]) -> None:
+    """Capture immediate watch/fork/issue webhook sender before REST /events indexing."""
+    event_path = os.environ.get("GITHUB_EVENT_PATH", "").strip()
+    event_name = os.environ.get("GITHUB_EVENT_NAME", "").strip()
+    if not event_path or not Path(event_path).is_file():
+        return
+    try:
+        payload = json.loads(Path(event_path).read_text(encoding="utf-8"))
+    except Exception:
+        return
+
+    sender = payload.get("sender") or {}
+    repo = (payload.get("repository") or {}).get("name", OWNER)
+    login = sender.get("login", "")
+    if not login or login == "github-actions[bot]":
+        return
+
+    now_iso = datetime.now(timezone.utc).strftime("%Y-%m-%dT%H:%M:%SZ")
+    if event_name == "watch":
+        all_events.append({"label": "⭐ Starred", "actor": login, "repo": repo, "created_at": now_iso})
+        stargazers.append({
+            "login": login,
+            "avatar_url": sender.get("avatar_url", ""),
+            "html_url": sender.get("html_url", f"https://github.com/{login}"),
+            "repo": repo,
+            "starred_at": now_iso,
+        })
+    elif event_name == "fork":
+        all_events.append({"label": "🔱 Forked", "actor": login, "repo": repo, "created_at": now_iso})
+    elif event_name == "issues":
+        num = (payload.get("issue") or {}).get("number")
+        action = payload.get("action", "updated")
+        suffix = f" #{num}" if num else ""
+        all_events.append({"label": f"🐛 Issue {action}{suffix}", "actor": login, "repo": repo, "created_at": now_iso})
+
+
 def _collect_data() -> tuple[int, int, int, list[dict], list[dict]]:
     repos_raw = _api_get(
         f"https://api.github.com/users/{OWNER}/repos?per_page=100&type=owner&sort=updated"
@@ -94,31 +137,41 @@ def _collect_data() -> tuple[int, int, int, list[dict], list[dict]]:
 
     all_events: list[dict] = []
     stargazers: list[dict] = []
+    _seed_webhook_event(all_events, stargazers)
 
     for repo in repos[:12]:
         name = repo["name"]
         try:
-            evs = _api_get(
-                f"https://api.github.com/repos/{OWNER}/{name}/events?per_page=20"
-            )
-            for ev in evs:
-                actor = (ev.get("actor") or {}).get("login", "")
-                if not actor or actor == "github-actions[bot]":
-                    continue
-                label = _describe_event(ev)
-                if not label:
-                    continue
-                all_events.append(
-                    {
-                        "id": ev.get("id", ""),
-                        "label": label,
-                        "actor": actor,
-                        "repo": name,
-                        "created_at": ev.get("created_at", ""),
-                    }
-                )
+            evs = _api_get(f"https://api.github.com/repos/{OWNER}/{name}/events?per_page=30")
         except urllib.error.HTTPError:
-            pass
+            try:
+                evs = _api_get(f"https://api.github.com/repos/{OWNER}/{name}/events?per_page=30", use_auth=False)
+            except urllib.error.HTTPError:
+                evs = []
+
+        for ev in evs:
+            actor_obj = ev.get("actor") or {}
+            actor = actor_obj.get("login", "")
+            if not actor or actor == "github-actions[bot]":
+                continue
+            label = _describe_event(ev)
+            if not label:
+                continue
+            created = ev.get("created_at", "")
+            all_events.append({
+                "label": label,
+                "actor": actor,
+                "repo": name,
+                "created_at": created,
+            })
+            if ev.get("type") == "WatchEvent":
+                stargazers.append({
+                    "login": actor,
+                    "avatar_url": actor_obj.get("avatar_url", ""),
+                    "html_url": f"https://github.com/{actor}",
+                    "repo": name,
+                    "starred_at": created,
+                })
 
         if int(repo.get("stargazers_count", 0)) > 0:
             try:
@@ -127,43 +180,31 @@ def _collect_data() -> tuple[int, int, int, list[dict], list[dict]]:
                     accept="application/vnd.github.star+json",
                 )
             except urllib.error.HTTPError:
-                try:
-                    stars_raw = _api_get(
-                        f"https://api.github.com/repos/{OWNER}/{name}/stargazers?per_page=30"
-                    )
-                except urllib.error.HTTPError:
-                    stars_raw = []
+                stars_raw = []
 
             for item in stars_raw:
-                if isinstance(item, dict) and "user" in item:
-                    u = item["user"]
-                    starred_at = item.get("starred_at", "")
-                else:
-                    u = item
-                    starred_at = ""
+                u = item["user"] if isinstance(item, dict) and "user" in item else item
                 login = u.get("login")
                 if not login:
                     continue
-                stargazers.append(
-                    {
-                        "login": login,
-                        "avatar_url": u.get("avatar_url", ""),
-                        "html_url": u.get("html_url", f"https://github.com/{login}"),
-                        "repo": name,
-                        "starred_at": starred_at,
-                    }
-                )
+                stargazers.append({
+                    "login": login,
+                    "avatar_url": u.get("avatar_url", ""),
+                    "html_url": u.get("html_url", f"https://github.com/{login}"),
+                    "repo": name,
+                    "starred_at": item.get("starred_at", "") if isinstance(item, dict) else "",
+                })
 
-    # Sort events newest first & deduplicate
+    # Deduplicate events (prefer webhook/REST matching without second-level drift if identical actor+repo+label)
     seen_ev: set[str] = set()
     unique_events: list[dict] = []
     for ev in sorted(all_events, key=lambda x: x["created_at"], reverse=True):
-        key = f"{ev['label']}:{ev['actor']}:{ev['repo']}:{ev['created_at']}"
+        day_hour = ev["created_at"][:13]
+        key = f"{ev['label']}:{ev['actor']}:{ev['repo']}:{day_hour}"
         if key not in seen_ev:
             seen_ev.add(key)
             unique_events.append(ev)
 
-    # Sort stargazers newest first & deduplicate by login
     seen_star: set[str] = set()
     unique_stars: list[dict] = []
     for st in sorted(stargazers, key=lambda x: x["starred_at"], reverse=True):
@@ -206,19 +247,13 @@ def _render_section() -> str:
         lines.append("")
         lines.append('<div align="center">')
         lines.append("  <sub><b>Recent Stargazers</b></sub><br />")
-        avatar_links = []
         for st in stars:
             login = st["login"]
-            av = st["avatar_url"]
-            if "?" in av:
-                av_small = f"{av}&s=56"
-            else:
-                av_small = f"{av}?s=56"
+            av_small = _clean_avatar(st["avatar_url"], 56) or f"https://github.com/{login}.png?size=56"
             title = f"@{login} starred {OWNER}/{st['repo']}"
-            avatar_links.append(
+            lines.append(
                 f'  <a href="{st["html_url"]}" title="{title}"><img src="{av_small}" width="28" height="28" alt="@{login}" /></a>'
             )
-        lines.extend(avatar_links)
         lines.append("</div>")
 
     return "\n".join(lines)
