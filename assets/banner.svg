@@ -1,0 +1,126 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="880" height="230" viewBox="0 0 880 230" fill="none">
+  <defs>
+    <linearGradient id="bgGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#090b12" />
+      <stop offset="50%" stop-color="#111422" />
+      <stop offset="100%" stop-color="#1a1b27" />
+    </linearGradient>
+
+    <linearGradient id="borderGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#a855f7" stop-opacity="0.7" />
+      <stop offset="50%" stop-color="#70a5fd" stop-opacity="0.45" />
+      <stop offset="100%" stop-color="#06b6d4" stop-opacity="0.7" />
+    </linearGradient>
+
+    <linearGradient id="titleGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#bf91f3" />
+      <stop offset="50%" stop-color="#70a5fd" />
+      <stop offset="100%" stop-color="#06b6d4" />
+    </linearGradient>
+
+    <linearGradient id="barGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#a855f7" stop-opacity="0" />
+      <stop offset="35%" stop-color="#a855f7" />
+      <stop offset="65%" stop-color="#06b6d4" />
+      <stop offset="100%" stop-color="#06b6d4" stop-opacity="0" />
+    </linearGradient>
+
+    <radialGradient id="orbPurple" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#a855f7" stop-opacity="0.22" />
+      <stop offset="100%" stop-color="#a855f7" stop-opacity="0" />
+    </radialGradient>
+
+    <radialGradient id="orbCyan" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#06b6d4" stop-opacity="0.20" />
+      <stop offset="100%" stop-color="#06b6d4" stop-opacity="0" />
+    </radialGradient>
+
+    <pattern id="cyberGrid" width="32" height="32" patternUnits="userSpaceOnUse">
+      <path d="M 32 0 L 0 0 0 32" fill="none" stroke="#94a3b8" stroke-opacity="0.06" stroke-width="1" />
+      <circle cx="0" cy="0" r="1" fill="#70a5fd" fill-opacity="0.14" />
+    </pattern>
+
+    <clipPath id="cardClip">
+      <rect x="1" y="1" width="878" height="228" rx="18" />
+    </clipPath>
+
+    <clipPath id="barClip">
+      <rect x="160" y="176" width="560" height="3" rx="1.5" />
+    </clipPath>
+  </defs>
+
+  <style>
+    .sans { font-family: 'Inter', 'Segoe UI', -apple-system, BlinkMacSystemFont, sans-serif; }
+    .mono { font-family: 'JetBrains Mono', 'Fira Code', 'Cascadia Code', Consolas, ui-monospace, monospace; }
+
+    @keyframes pulseDot {
+      0%, 100% { opacity: 1; transform: scale(1); }
+      50% { opacity: 0.45; transform: scale(0.85); }
+    }
+    @keyframes scanSlide {
+      0% { transform: translateX(-280px); }
+      50% { transform: translateX(280px); }
+      100% { transform: translateX(-280px); }
+    }
+    @keyframes floatGlow {
+      0%, 100% { opacity: 0.85; }
+      50% { opacity: 1; }
+    }
+    .dot-live {
+      transform-origin: 50px 41px;
+      animation: pulseDot 2.2s ease-in-out infinite;
+    }
+    .scan-bar {
+      animation: scanSlide 5.5s ease-in-out infinite;
+    }
+    .glow-orb {
+      animation: floatGlow 6s ease-in-out infinite;
+    }
+  </style>
+
+  <!-- Card Background & Grid -->
+  <g clip-path="url(#cardClip)">
+    <rect x="1" y="1" width="878" height="228" rx="18" fill="url(#bgGrad)" />
+    <rect x="1" y="1" width="878" height="228" fill="url(#cyberGrid)" />
+
+    <!-- Ambient Orbs -->
+    <circle cx="150" cy="40" r="190" fill="url(#orbPurple)" class="glow-orb" />
+    <circle cx="740" cy="195" r="210" fill="url(#orbCyan)" class="glow-orb" />
+  </g>
+
+  <!-- Crisp Border -->
+  <rect x="1" y="1" width="878" height="228" rx="18" stroke="url(#borderGrad)" stroke-width="1.5" />
+
+  <!-- Top Left Status Pill -->
+  <rect x="32" y="27" width="232" height="28" rx="14" fill="#161928" fill-opacity="0.9" stroke="#2d324b" stroke-width="1" />
+  <circle cx="50" cy="41" r="6" fill="#22c55e" fill-opacity="0.22" />
+  <circle cx="50" cy="41" r="3.8" fill="#22c55e" class="dot-live" />
+  <text x="64" y="45" class="mono" font-size="11.2" font-weight="600" fill="#cbd5e1">ONLINE · NHA TRANG, VN</text>
+
+  <!-- Top Right Telemetry Pill -->
+  <rect x="656" y="27" width="192" height="28" rx="14" fill="#161928" fill-opacity="0.9" stroke="#2d324b" stroke-width="1" />
+  <text x="752" y="45" text-anchor="middle" class="mono" font-size="11.2" font-weight="600" fill="#70a5fd">PWN · WEB · RE · E2EE</text>
+
+  <!-- Hero Title -->
+  <text x="440" y="114" text-anchor="middle" class="sans" font-size="42" font-weight="800" letter-spacing="-0.8">
+    <tspan fill="#f8fafc">Phước Toàn</tspan>
+    <tspan fill="#475569"> // </tspan>
+    <tspan fill="url(#titleGrad)" class="mono">0xshijn</tspan>
+  </text>
+
+  <!-- Hero Subtitle -->
+  <text x="440" y="148" text-anchor="middle" class="mono" font-size="14.5" font-weight="500" fill="#94a3b8" letter-spacing="0.4">
+    Pwn &amp; Security Research  ·  Systems &amp; Automation  ·  OSCP 2026
+  </text>
+
+  <!-- Animated Gradient Scanner Bar -->
+  <rect x="160" y="176" width="560" height="3" rx="1.5" fill="#222639" />
+  <g clip-path="url(#barClip)">
+    <rect x="330" y="176" width="220" height="3" rx="1.5" fill="url(#barGrad)" class="scan-bar" />
+  </g>
+
+  <!-- Bottom Motto -->
+  <text x="440" y="205" text-anchor="middle" class="mono" font-size="11.8" fill="#7e8ba3">
+    $ no pwn / web no life — nói ít làm nhiều
+  </text>
+</svg>
