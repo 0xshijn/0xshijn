@@ -106,7 +106,7 @@
 |---|---|---|---|
 | 📦 Pushed `main` | [`@0xshijn`](https://github.com/0xshijn) | [`0xshijn/igchat-v2`](https://github.com/0xshijn/igchat-v2) | `09/11 00:52 UTC+7` |
 | 🚀 Released `v3.0.0` | [`@0xshijn`](https://github.com/0xshijn) | [`0xshijn/igchat-v2`](https://github.com/0xshijn/igchat-v2) | `09/11 00:40 UTC+7` |
-| 📦 Pushed `main` | [`@0xshijn`](https://github.com/0xshijn) | [`0xshijn/igchat-v2`](https://github.com/0xshijn/igchat-v2) | `08/11 23:12 UTC+7` |
+| 📦 Pushed `main` | [`@0xshijn`](https://github.com/0xshijn) | [`0xshijn/igchat-v2`](https://github.com/0xshijn/igchat-v2) | `08/11 23:29 UTC+7` |
 | ⭐ Starred | [`@dafeshh`](https://github.com/dafeshh) | [`0xshijn/igchat-v2`](https://github.com/0xshijn/igchat-v2) | `08/11 21:10 UTC+7` |
 | ⭐ Starred | [`@patonobro`](https://github.com/patonobro) | [`0xshijn/igchat-v2`](https://github.com/0xshijn/igchat-v2) | `08/11 19:32 UTC+7` |
 | 📦 Pushed `main` | [`@0xshijn`](https://github.com/0xshijn) | [`0xshijn/0xshijn`](https://github.com/0xshijn/0xshijn) | `08/11 13:30 UTC+7` |
