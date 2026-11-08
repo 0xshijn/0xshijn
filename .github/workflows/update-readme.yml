@@ -1,0 +1,51 @@
+name: Update Profile Activity
+
+on:
+  watch:
+    types: [started]
+  fork:
+  issues:
+    types: [opened, closed]
+  pull_request:
+    types: [opened, closed]
+  schedule:
+    - cron: "*/30 * * * *"
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+concurrency:
+  group: update-profile-readme
+  cancel-in-progress: true
+
+jobs:
+  update-readme:
+    if: github.actor != 'github-actions[bot]'
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - name: Sync repository activity and stargazers
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          GITHUB_OWNER: ${{ github.repository_owner }}
+        run: python scripts/update_readme.py
+
+      - name: Commit updated README
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          if ! git diff --quiet README.md; then
+            git add README.md
+            git commit -m "chore(profile): sync repo activity & stargazers [skip ci]"
+            git push
+          else
+            echo "No changes to commit."
+          fi

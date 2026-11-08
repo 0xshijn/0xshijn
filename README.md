@@ -4,16 +4,17 @@
   <img src="./assets/banner.svg" alt="Phước Toàn // 0xshijn" width="100%" />
 </a>
 
-<br />
-
 <a href="https://0xshijn.is-a.dev">
-  <img src="https://readme-typing-svg.demolab.com?font=JetBrains+Mono&weight=600&size=16&pause=1400&color=70A5FD&center=true&vCenter=true&width=640&lines=No+pwn+%2F+web+no+life.;Learning+pwn.+Breaking+assumptions.+Understanding+systems.;Advanced+Linux+Kernel+Exploitation+%26+OSCP+2026.;Build+fast.+Ship+clean.+Stay+curious." alt="Typing SVG" />
+  <img src="https://readme-typing-svg.demolab.com?font=JetBrains+Mono&weight=600&size=15&pause=1400&color=70A5FD&center=true&vCenter=true&width=640&height=34&lines=No+pwn+%2F+web+no+life.;Every+boundary+is+an+assumption+waiting+to+break.;Linux+Kernel+Exploitation+%26+OSCP+2026.;Read+disassembly.+Corrupt+state.+Control+RIP." alt="Typing SVG" />
 </a>
 
 <p>
   <a href="https://0xshijn.is-a.dev"><img src="https://img.shields.io/badge/Portfolio-0xshijn.is--a.dev-7C3AED?style=for-the-badge&labelColor=161928&logo=firefox&logoColor=white" alt="Portfolio" /></a>
   <a href="https://t.me/ShiinNoHacker"><img src="https://img.shields.io/badge/Telegram-%40ShiinNoHacker-0891B2?style=for-the-badge&labelColor=161928&logo=telegram&logoColor=white" alt="Telegram" /></a>
   <a href="mailto:0xshiinnn@gmail.com"><img src="https://img.shields.io/badge/Email-0xshiinnn%40gmail.com-1F2437?style=for-the-badge&labelColor=161928&logo=gmail&logoColor=EA4335" alt="Email" /></a>
+  <br />
+  <a href="https://github.com/0xshijn?tab=repositories"><img src="https://img.shields.io/github/stars/0xshijn?affiliations=OWNER&style=for-the-badge&label=Stars&labelColor=161928&color=F59E0B&logo=github" alt="Total Stars" /></a>
+  <a href="https://github.com/0xshijn?tab=followers"><img src="https://img.shields.io/github/followers/0xshijn?style=for-the-badge&label=Followers&labelColor=161928&color=BF91F3&logo=github" alt="Followers" /></a>
   <a href="https://instagram.com/_phwctoazn"><img src="https://img.shields.io/badge/Instagram-%40__phwctoazn-1F2437?style=for-the-badge&labelColor=161928&logo=instagram&logoColor=E4405F" alt="Instagram" /></a>
   <a href="https://facebook.com/phwctoazn"><img src="https://img.shields.io/badge/Facebook-phwctoazn-1F2437?style=for-the-badge&labelColor=161928&logo=facebook&logoColor=1877F2" alt="Facebook" /></a>
 </p>
@@ -23,29 +24,29 @@
 ---
 
 <div align="center">
-  <img src="./assets/terminal.svg" alt="whoami 0xshijn" width="760" />
+  <img src="./assets/terminal.svg" alt="shijn@pwndbg" width="760" />
 </div>
 
 <br />
 
-<h3 align="center">⚡ What I'm Focusing On</h3>
+<h3 align="center">⚡ Core Focus &amp; Methodology</h3>
 
 <table>
   <tr>
     <td width="50%" valign="top">
-      <h4>🧠 Security Research &amp; CTF</h4>
+      <h4>🧠 Binary Exploitation &amp; Security Research</h4>
       <ul>
-        <li><b>Binary Exploitation (Pwn):</b> Linux Kernel Exploitation, heap grooming &amp; KASLR bypass</li>
-        <li><b>Web Security:</b> Vulnerability research, pentest tooling &amp; CTF writeups</li>
-        <li><b>2026 Goal:</b> Grinding towards <b>OSCP Certification</b></li>
+        <li><b>Pwn &amp; Kernel:</b> Linux Kernel Exploitation, heap grooming (SLAB/SLUB) &amp; KASLR bypass</li>
+        <li><b>Web Security:</b> Vulnerability research, attack-surface auditing &amp; CTF writeups</li>
+        <li><b>2026 Target:</b> Cracking <b>OSCP Certification</b></li>
       </ul>
     </td>
     <td width="50%" valign="top">
-      <h4>⚙️ Engineering &amp; Automation</h4>
+      <h4>⚙️ Reverse Engineering &amp; Systems</h4>
       <ul>
-        <li><b>Reverse Engineering:</b> Protocol analysis, E2EE bridges &amp; MQTT clients</li>
-        <li><b>Systems &amp; Tooling:</b> Async Python &amp; Go services / CLI automation</li>
-        <li><b>Mindset:</b> <i>"Nói ít làm nhiều — thực tế, ưu tiên chất lượng"</i></li>
+        <li><b>Protocol RE:</b> Instagram Direct, MQTT internals &amp; Labyrinth/Signal E2EE bridges</li>
+        <li><b>Tooling:</b> Async Python &amp; Go JSON-RPC services engineered for speed</li>
+        <li><b>Pwn Ethos:</b> <i>"Break assumptions. Corrupt the state. Control RIP."</i></li>
       </ul>
     </td>
   </tr>
@@ -53,7 +54,7 @@
 
 ---
 
-<h3 align="center">🛠️ Tech Stack &amp; Toolbox</h3>
+<h3 align="center">🛠️ Arsenal &amp; Tech Stack</h3>
 
 <div align="center">
   <a href="https://skillicons.dev">
@@ -63,32 +64,57 @@
 
 ---
 
-<h3 align="center">🚀 Featured Projects</h3>
+<h3 align="center">🚀 Featured Builds</h3>
 
 <table width="100%">
   <thead>
     <tr>
-      <th width="21%" align="left">Project</th>
-      <th width="44%" align="left">Description</th>
+      <th width="20%" align="left">Project</th>
+      <th width="42%" align="left">Description</th>
       <th width="20%" align="center">Stack</th>
-      <th width="15%" align="center">Links</th>
+      <th width="18%" align="center">Telemetry</th>
     </tr>
   </thead>
   <tbody>
     <tr>
       <td><b><a href="https://github.com/0xshijn/igchat-v2">igchat-v2</a></b></td>
-      <td>Async Python &amp; Go JSON-RPC bridge for Instagram Direct &amp; E2EE (Labyrinth / Signal)</td>
+      <td>Async-first Python client &amp; isolated Go JSON-RPC bridge for Instagram Direct &amp; E2EE</td>
       <td align="center"><code>Python</code> <code>Go</code> <code>E2EE</code></td>
-      <td align="center"><a href="https://github.com/0xshijn/igchat-v2">Repo</a></td>
+      <td align="center"><a href="https://github.com/0xshijn/igchat-v2/stargazers"><img src="https://img.shields.io/github/stars/0xshijn/igchat-v2?style=flat-square&labelColor=161928&color=F59E0B" alt="igchat-v2 stars" /></a></td>
     </tr>
     <tr>
       <td><b><a href="https://0xshijn.is-a.dev">0xshijn.is-a.dev</a></b></td>
-      <td>Personal portfolio, CTF Writeups, Public APIs &amp; Daily Blog</td>
+      <td>Personal portfolio, CTF Writeups, Public APIs &amp; Daily Notes</td>
       <td align="center"><code>HTML</code> <code>CSS</code> <code>JS</code></td>
-      <td align="center"><a href="https://0xshijn.is-a.dev">Live</a> · <a href="https://github.com/0xshijn/0xshijn.github.io">Repo</a></td>
+      <td align="center"><a href="https://0xshijn.is-a.dev"><img src="https://img.shields.io/badge/Live-Site-7C3AED?style=flat-square&labelColor=161928" alt="Live Site" /></a> <a href="https://github.com/0xshijn/0xshijn.github.io"><img src="https://img.shields.io/github/last-commit/0xshijn/0xshijn.github.io?style=flat-square&label=Updated&labelColor=161928&color=0891B2" alt="Updated" /></a></td>
     </tr>
   </tbody>
 </table>
+
+---
+
+<h3 align="center">📡 Live Repo Pulse &amp; Stargazers</h3>
+
+<!--START_SECTION:activity-->
+<div align="center">
+  <sub><b>Repos:</b> <code>4</code> &nbsp;·&nbsp; <b>Total Stars:</b> <code>2</code> &nbsp;·&nbsp; <b>Forks:</b> <code>0</code> &nbsp;·&nbsp; <i>Synced automatically via GitHub Actions</i></sub>
+</div>
+
+<div align="center">
+
+| Activity | Actor | Repository | Time (UTC+7) |
+|---|---|---|---|
+| ⭐ Starred | [`@m008v`](https://github.com/m008v) | [`0xshijn/igchat-v2`](https://github.com/0xshijn/igchat-v2) | `08/11 13:10 UTC+7` |
+| ⭐ Starred | [`@0xshijn`](https://github.com/0xshijn) | [`0xshijn/igchat-v2`](https://github.com/0xshijn/igchat-v2) | `08/11 12:59 UTC+7` |
+
+</div>
+
+<div align="center">
+  <sub><b>Recent Stargazers</b></sub><br />
+  <a href="https://github.com/m008v" title="@m008v starred 0xshijn/igchat-v2"><img src="https://avatars.githubusercontent.com/u/96736064?v=4&s=56" width="28" height="28" alt="@m008v" /></a>
+  <a href="https://github.com/0xshijn" title="@0xshijn starred 0xshijn/igchat-v2"><img src="https://avatars.githubusercontent.com/u/240699867?v=4&s=56" width="28" height="28" alt="@0xshijn" /></a>
+</div>
+<!--END_SECTION:activity-->
 
 ---
 
