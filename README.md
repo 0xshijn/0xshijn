@@ -108,12 +108,6 @@
 | ⭐ Starred | [`@0xshijn`](https://github.com/0xshijn) | [`0xshijn/igchat-v2`](https://github.com/0xshijn/igchat-v2) | `08/11 12:59 UTC+7` |
 
 </div>
-
-<div align="center">
-  <sub><b>Recent Stargazers</b></sub><br />
-  <a href="https://github.com/m008v" title="@m008v starred 0xshijn/igchat-v2"><img src="https://avatars.githubusercontent.com/u/96736064?v=4&s=56" width="28" height="28" alt="@m008v" /></a>
-  <a href="https://github.com/0xshijn" title="@0xshijn starred 0xshijn/igchat-v2"><img src="https://avatars.githubusercontent.com/u/240699867?v=4&s=56" width="28" height="28" alt="@0xshijn" /></a>
-</div>
 <!--END_SECTION:activity-->
 
 ---
