@@ -104,12 +104,12 @@
 
 | Activity | Actor | Repository | Time (UTC+7) |
 |---|---|---|---|
+| 📦 Pushed `main` | [`@0xshijn`](https://github.com/0xshijn) | [`0xshijn/igchat-v2`](https://github.com/0xshijn/igchat-v2) | `09/11 22:23 UTC+7` |
 | 📦 Pushed `main` | [`@0xshijn`](https://github.com/0xshijn) | [`0xshijn/igchat-v2`](https://github.com/0xshijn/igchat-v2) | `09/11 19:11 UTC+7` |
 | ⭐ Starred | [`@ttkienn`](https://github.com/ttkienn) | [`0xshijn/igchat-v2`](https://github.com/0xshijn/igchat-v2) | `09/11 18:44 UTC+7` |
 | 📦 Pushed `main` | [`@0xshijn`](https://github.com/0xshijn) | [`0xshijn/igchat-v2`](https://github.com/0xshijn/igchat-v2) | `09/11 00:56 UTC+7` |
 | 🚀 Released `v3.0.0` | [`@0xshijn`](https://github.com/0xshijn) | [`0xshijn/igchat-v2`](https://github.com/0xshijn/igchat-v2) | `09/11 00:40 UTC+7` |
 | 📦 Pushed `main` | [`@0xshijn`](https://github.com/0xshijn) | [`0xshijn/igchat-v2`](https://github.com/0xshijn/igchat-v2) | `08/11 23:29 UTC+7` |
-| ⭐ Starred | [`@dafeshh`](https://github.com/dafeshh) | [`0xshijn/igchat-v2`](https://github.com/0xshijn/igchat-v2) | `08/11 21:10 UTC+7` |
 
 </div>
 
