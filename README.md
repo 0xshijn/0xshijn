@@ -104,12 +104,12 @@
 
 | Activity | Actor | Repository | Time (UTC+7) |
 |---|---|---|---|
+| 📦 Pushed `main` | [`@0xshijn`](https://github.com/0xshijn) | [`0xshijn/Kryvnix-Antivirus`](https://github.com/0xshijn/Kryvnix-Antivirus) | `25/11 10:32 UTC+7` |
 | 🚀 Released `v2.0.0` | [`@0xshijn`](https://github.com/0xshijn) | [`0xshijn/Kryvnix-Antivirus`](https://github.com/0xshijn/Kryvnix-Antivirus) | `25/11 10:28 UTC+7` |
 | 🚀 Released `v1.0.0` | [`@0xshijn`](https://github.com/0xshijn) | [`0xshijn/Kryvnix-Antivirus`](https://github.com/0xshijn/Kryvnix-Antivirus) | `25/11 09:55 UTC+7` |
+| ✨ Created branch | [`@0xshijn`](https://github.com/0xshijn) | [`0xshijn/Kryvnix-Antivirus`](https://github.com/0xshijn/Kryvnix-Antivirus) | `25/11 09:54 UTC+7` |
+| 📦 Pushed `main` | [`@0xshijn`](https://github.com/0xshijn) | [`0xshijn/igchat-v2`](https://github.com/0xshijn/igchat-v2) | `24/11 22:17 UTC+7` |
 | 📦 Pushed `main` | [`@0xshijn`](https://github.com/0xshijn) | [`0xshijn/igchat-v2`](https://github.com/0xshijn/igchat-v2) | `13/11 16:04 UTC+7` |
-| 📦 Pushed `main` | [`@0xshijn`](https://github.com/0xshijn) | [`0xshijn/igchat-v2`](https://github.com/0xshijn/igchat-v2) | `09/11 22:27 UTC+7` |
-| 📦 Pushed `main` | [`@0xshijn`](https://github.com/0xshijn) | [`0xshijn/igchat-v2`](https://github.com/0xshijn/igchat-v2) | `09/11 19:11 UTC+7` |
-| ⭐ Starred | [`@ttkienn`](https://github.com/ttkienn) | [`0xshijn/igchat-v2`](https://github.com/0xshijn/igchat-v2) | `09/11 18:44 UTC+7` |
 
 </div>
 
