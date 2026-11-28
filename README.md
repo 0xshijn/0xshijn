@@ -97,29 +97,29 @@
 
 <!--START_SECTION:activity-->
 <div align="center">
-  <sub><b>Repos:</b> <code>5</code> &nbsp;·&nbsp; <b>Total Stars:</b> <code>5</code> &nbsp;·&nbsp; <b>Forks:</b> <code>0</code> &nbsp;·&nbsp; <i>Synced automatically via GitHub Actions</i></sub>
+  <sub><b>Repos:</b> <code>6</code> &nbsp;·&nbsp; <b>Total Stars:</b> <code>6</code> &nbsp;·&nbsp; <b>Forks:</b> <code>0</code> &nbsp;·&nbsp; <i>Synced automatically via GitHub Actions</i></sub>
 </div>
 
 <div align="center">
 
 | Activity | Actor | Repository | Time (UTC+7) |
 |---|---|---|---|
+| ⭐ Starred | [`@0xshijn`](https://github.com/0xshijn) | [`0xshijn/antigravity-custom-theme-mod`](https://github.com/0xshijn/antigravity-custom-theme-mod) | `28/11 23:13 UTC+7` |
+| 🚀 Released `v1.1.0` | [`@0xshijn`](https://github.com/0xshijn) | [`0xshijn/antigravity-custom-theme-mod`](https://github.com/0xshijn/antigravity-custom-theme-mod) | `28/11 22:47 UTC+7` |
 | 📦 Pushed `main` | [`@0xshijn`](https://github.com/0xshijn) | [`0xshijn/Kryvnix-Antivirus`](https://github.com/0xshijn/Kryvnix-Antivirus) | `25/11 10:32 UTC+7` |
 | 🚀 Released `v2.0.0` | [`@0xshijn`](https://github.com/0xshijn) | [`0xshijn/Kryvnix-Antivirus`](https://github.com/0xshijn/Kryvnix-Antivirus) | `25/11 10:28 UTC+7` |
 | ✨ Created branch | [`@0xshijn`](https://github.com/0xshijn) | [`0xshijn/Kryvnix-Antivirus`](https://github.com/0xshijn/Kryvnix-Antivirus) | `25/11 10:02 UTC+7` |
 | 🚀 Released `v1.0.0` | [`@0xshijn`](https://github.com/0xshijn) | [`0xshijn/Kryvnix-Antivirus`](https://github.com/0xshijn/Kryvnix-Antivirus) | `25/11 09:55 UTC+7` |
-| ✨ Created branch | [`@0xshijn`](https://github.com/0xshijn) | [`0xshijn/Kryvnix-Antivirus`](https://github.com/0xshijn/Kryvnix-Antivirus) | `25/11 09:54 UTC+7` |
-| 📦 Pushed `main` | [`@0xshijn`](https://github.com/0xshijn) | [`0xshijn/igchat-v2`](https://github.com/0xshijn/igchat-v2) | `24/11 22:17 UTC+7` |
 
 </div>
 
 <div align="center">
   <sub><b>Recent Stargazers</b></sub><br />
+  <a href="https://github.com/0xshijn" title="@0xshijn starred 0xshijn/antigravity-custom-theme-mod"><img src="https://avatars.githubusercontent.com/u/240699867?v=4&s=56" width="28" height="28" alt="@0xshijn" /></a>
   <a href="https://github.com/ttkienn" title="@ttkienn starred 0xshijn/igchat-v2"><img src="https://avatars.githubusercontent.com/u/87187870?v=4&s=56" width="28" height="28" alt="@ttkienn" /></a>
   <a href="https://github.com/dafeshh" title="@dafeshh starred 0xshijn/igchat-v2"><img src="https://avatars.githubusercontent.com/u/175527415?v=4&s=56" width="28" height="28" alt="@dafeshh" /></a>
   <a href="https://github.com/patonobro" title="@patonobro starred 0xshijn/igchat-v2"><img src="https://avatars.githubusercontent.com/u/183926351?v=4&s=56" width="28" height="28" alt="@patonobro" /></a>
   <a href="https://github.com/m008v" title="@m008v starred 0xshijn/igchat-v2"><img src="https://avatars.githubusercontent.com/u/96736064?v=4&s=56" width="28" height="28" alt="@m008v" /></a>
-  <a href="https://github.com/0xshijn" title="@0xshijn starred 0xshijn/igchat-v2"><img src="https://avatars.githubusercontent.com/u/240699867?v=4&s=56" width="28" height="28" alt="@0xshijn" /></a>
 </div>
 <!--END_SECTION:activity-->
 
